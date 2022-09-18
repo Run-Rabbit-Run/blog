@@ -12,6 +12,9 @@
     // allowSyntheticDefaultImports позволяет использовать обычные импорты вместо import * as 'React' from 'react'
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
