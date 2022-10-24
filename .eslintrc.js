@@ -43,7 +43,7 @@ module.exports = {
             'warn',
             {
                 ignoreComments: true,
-                code: 140,
+                code: 100,
             },
         ],
     },
