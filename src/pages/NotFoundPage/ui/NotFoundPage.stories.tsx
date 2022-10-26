@@ -10,7 +10,11 @@ export default {
     },
 } as ComponentMeta<typeof NotFoundPage>;
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <ThemeProvider><NotFoundPage {...args} /></ThemeProvider>;
+const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+    <ThemeProvider>
+        <NotFoundPage {...args} />
+    </ThemeProvider>
+);
 
 export const Default = Template.bind({});
 Default.args = {};
