@@ -15,12 +15,7 @@ export const Navbar = ({
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
             <div className={cls.links}>
-                <AppLink theme={AppLinkTheme.INVERTED} className={cls.mainLink} to="/">
-                    {t('Главная')}
-                </AppLink>
-                <AppLink theme={AppLinkTheme.INVERTED} to="/about">
-                    {t('О сайте')}
-                </AppLink>
+                /
             </div>
         </div>
     );

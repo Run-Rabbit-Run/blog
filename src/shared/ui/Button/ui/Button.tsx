@@ -2,27 +2,46 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
 
-export enum ThemeButton {
+export enum ButtonTheme {
     CLEAR = 'clear',
-    OUTLINE = 'outline'
+    OUTLINE = 'outline',
+    SQUARE = 'square'
+}
+
+export enum ButtonColor {
+    PRIMARY = 'color-primary',
+    INVERTED = 'color-inverted',
+}
+
+export enum ButtonBgColor {
+    PRIMARY = 'bg-color-primary',
+    INVERTED = 'bg-color-inverted',
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme?: ThemeButton;
+    theme?: ButtonTheme;
+    color?: ButtonColor;
+    bgColor?: ButtonBgColor;
 }
 
 export const Button: FC<ButtonProps> = ({
     className,
     children,
     theme,
+    color = ButtonColor.PRIMARY,
+    bgColor = ButtonBgColor.PRIMARY,
     ...otherProps
-}) => (
-    <button
-        className={classNames(cls.button, {}, [className, cls[theme]])}
-        type="button"
-        {...otherProps}
-    >
-        {children}
-    </button>
-);
+}) => {
+    const additionalClasses = [className, cls[theme], cls[color], cls[bgColor]];
+
+    return (
+        <button
+            className={classNames(cls.button, {}, additionalClasses)}
+            type="button"
+            {...otherProps}
+        >
+            {children}
+        </button>
+    );
+};
