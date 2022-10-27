@@ -48,14 +48,20 @@ export const Sidebar = ({
                     theme={AppLinkTheme.INVERTED}
                     to={RoutePath.main}
                 >
-                    {collapsed ? <HomeIcon className={cls.icon} /> : t('Главная')}
+                    <HomeIcon className={cls.icon} />
+                    <span className={cls.itemText}>
+                        {t('Главная')}
+                    </span>
                 </AppLink>
                 <AppLink
                     className={cls.item}
                     theme={AppLinkTheme.INVERTED}
                     to={RoutePath.about}
                 >
-                    {collapsed ? <PageIcon className={cls.icon} /> : t('О сайте')}
+                    <PageIcon className={cls.icon} />
+                    <span className={cls.itemText}>
+                        {t('О сайте')}
+                    </span>
                 </AppLink>
             </div>
             <div className={cls.switchers}>

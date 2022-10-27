@@ -28,18 +28,6 @@
     fill: var(--inverted-primary-color);
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-
-    .switchers {
-        flex-direction: column;
-    }
-
-    .lang {
-        margin-left: 0;
-    }
-}
-
 .collapsedButton {
     position: absolute;
     top: calc(50% - (var(--button-square-side) / 2) - var(--navbar-height));
@@ -55,9 +43,37 @@
 }
 
 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
     margin-bottom: 10px;
 
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.itemText {
+    margin-left: 10px;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .switchers {
+        flex-direction: column;
+    }
+
+    .lang {
+        margin-left: 0;
+    }
+
+    .itemText {
+        opacity: 0;
+        width: 0;
+        height: 0;
     }
 }
