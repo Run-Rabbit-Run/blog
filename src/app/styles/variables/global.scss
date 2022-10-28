@@ -12,5 +12,16 @@
     --button-square-side: 35px;
     --sidebar-width: 300px;
     --sidebar-width-collapsed: 80px;
-    --border-radius: 3px;
+    --border-radius-s: 3px;
+    --border-radius-m: 8px;
+    --border-radius-l: 15px;
+
+    // z-index
+    --modal-z-index: 10;
+
+    // цвета
+    --overlay-color: rgba(0 0 0 / 60%);
+
+    // time
+    --animation-transition: 0.3s;
 }
