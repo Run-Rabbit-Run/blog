@@ -1,9 +1,6 @@
 import { fireEvent, screen } from '@testing-library/react';
+import { renderComponent } from 'shared/lib/tests/renderComponent/renderComponent';
 import { Sidebar } from './Sidebar';
-import {
-    renderWithTranslation,
-} from '../../../../shared/lib/tests/renderWithTranslation/renderWithTranslation';
-import { renderComponent } from '../../../../shared/lib/tests/renderComponent/renderComponent';
 
 describe('Sidebar', () => {
     test('to be in the document', () => {

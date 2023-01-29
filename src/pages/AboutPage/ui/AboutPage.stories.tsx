@@ -10,7 +10,7 @@ export default {
     },
 } as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof AboutPage> = (args) => (
+const Template: ComponentStory<typeof AboutPage> = (args: Record<string, unknown>) => (
     <ThemeProvider>
         <AboutPage {...args} />
     </ThemeProvider>
