@@ -31,7 +31,7 @@
 .collapsedButton {
     position: absolute;
     top: calc(50% - (var(--button-square-side) / 2) - var(--navbar-height));
-    right: calc(0px - var(--button-square-side));
+    right: calc(5px - var(--button-square-side));
 }
 
 .items {
